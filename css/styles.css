@@ -1,0 +1,77 @@
+/* Center Bike — Layout principal */
+:root{
+  --red:#e30613;
+  --dark:#222;
+  --muted:#f2f2f2;
+  --white:#fff;
+  --container:1200px;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;}
+body{background:var(--muted);color:var(--dark);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin:0 auto;padding:12px}
+
+/* Barra superior */
+.promo-bar{background:var(--red);color:#fff;text-align:center;padding:8px;font-weight:700}
+
+/* Header */
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 12px;background:transparent}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img {
+  height: 70px; /* tamanho do logo ajustável */
+  width: auto;
+  display: block;
+}
+
+/* Busca */
+.search{flex:1;margin:0 20px;display:flex;align-items:center}
+.search input{flex:1;padding:10px;border:1px solid #e6e6e6;border-radius:6px 0 0 6px}
+.search .search-btn{padding:10px;border:1px solid #e6e6e6;border-left:0;border-radius:0 6px 6px 0;background:#fff;cursor:pointer}
+
+/* Ações no header */
+.header-actions{display:flex;gap:12px;align-items:center}
+.header-actions a{color:var(--dark);text-decoration:none;font-weight:700}
+
+/* Menu principal */
+.main-nav{background:#fff;border-top:4px solid var(--red);box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.main-nav .container{display:flex;align-items:center;justify-content:center;padding:10px 12px}
+.menu{list-style:none;margin:0;padding:0;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.menu-item{text-align:center}
+.menu-item a{
+  color:var(--dark);
+  text-decoration:none;
+  font-weight:700;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:14px;
+  transition:color 0.2s ease;
+}
+.menu-item img{
+  width:45px;
+  height:auto;
+  margin-bottom:4px;
+  transition:transform 0.2s ease;
+}
+.menu-item:hover img{transform:scale(1.1)}
+.menu-item:hover a{color:var(--red)}
+
+/* Hero/banner */
+.hero{padding:0;margin-top:12px}
+.hero-inner{position:relative}
+.slider{position:relative;overflow:hidden;border-radius:10px}
+.slide{width:100%;display:block;border-radius:10px}
+
+/* Rodapé */
+.site-footer{margin-top:28px;background:var(--white);padding:18px;border-top:1px solid #e6e6e6}
+.footer-inner{display:flex;flex-direction:column;gap:6px;text-align:center}
+.footer-inner p{margin:0;color:#555;font-size:14px}
+
+/* Responsividade */
+@media (max-width:900px){
+  .logo img { height: 50px; }
+  .menu{gap:16px}
+  .menu-item img{width:32px}
+  .menu-item a{font-size:13px}
+}

@@ -103,7 +103,7 @@
   </nav>
 
   <!-- 🖼️ CARROSSEL DE BANNERS -->
-  <section class="banner-slider">
+  <section class="banner-slider" id="slider">
     <div class="slider-container">
       <div class="slide active">
         <img src="img/banner1.jpg" alt="Promoção 1">
@@ -115,8 +115,8 @@
         <img src="img/banner3.jpg" alt="Promoção 3">
       </div>
 
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
+      <button class="slide-prev">&#10094;</button>
+      <button class="slide-next">&#10095;</button>
     </div>
   </section>
 
@@ -133,7 +133,7 @@
         <p>Telefone: (11) 99999-9999</p>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 Center Bike — Todos os direitos reservados.</div>
+    <div class="footer-bottom">© <span id="year"></span> Center Bike — Todos os direitos reservados.</div>
   </footer>
 
   <script src="js/main.js"></script>
